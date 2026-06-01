@@ -35,10 +35,10 @@ export default function QueEs() {
           transition={{ duration: 0.6, ease: "easeOut" }}
           className="text-center mb-16"
         >
-          <h2 className="font-heading font-bold text-text mb-5">
+          <h2 className="mb-5">
             Donde el oficio se vuelve oportunidad.
           </h2>
-          <p className="text-center">
+          <p className="md:text-center">
             ServicioSGO es el lugar donde los santiagueños encuentran al  técnico u oficio que necesitan, y donde los
             trabajadores independientes muestran lo que saben hacer.
           </p>
@@ -64,7 +64,7 @@ export default function QueEs() {
                 {feat.title}
               </h5>
               </div>
-              <p className="">
+              <p className="text-left">
                 {feat.description}
               </p>
             </motion.div>

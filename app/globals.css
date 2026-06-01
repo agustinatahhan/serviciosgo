@@ -125,7 +125,7 @@
  
 
   h2 {
-    @apply font-heading font-bold leading-snug text-[1.8rem] md:text-[2.8rem];
+    @apply font-heading font-bold leading-snug text-[2rem] md:text-[2.8rem];
   }
 
 

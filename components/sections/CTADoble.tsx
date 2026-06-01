@@ -44,7 +44,7 @@ export default function CTADoble() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-60px" }}
           transition={{ duration: 0.55, delay: 0.2, ease: "easeOut" }}
-          className="flex flex-col sm:flex-row gap-4"
+          className="w-full flex flex-col md:w-auto md:items-center md:justify-center sm:flex-row gap-4"
         >
           <Button variant="primary">Necesito un servicio</Button>
           <Button variant="secondary">Ofrezco mis servicios</Button>

@@ -5,6 +5,7 @@ import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import Button from "@/components/ui/Button";
+import Link from "next/link";
 
 const navLinks = [
   { label: "Inicio", href: "#inicio" },
@@ -28,7 +29,7 @@ export default function Navbar() {
       transition={{ duration: 0.25 }}
       className="sticky top-0 z-50 bg-white border-b border-gray-100"
     >
-      <nav className="max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between h-20">
+      <nav className="max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between h-16 lg:h-20">
         <div className="flex items-center gap-4">
           <a href="#inicio" className="flex items-center">
             <Image
@@ -36,7 +37,7 @@ export default function Navbar() {
               alt="Logo ServicioSGO"
               width={180}
               height={48}
-              className="object-contain "
+              className="object-contain h-8 w-auto lg:h-12"
               priority
             />
           </a>
@@ -64,9 +65,16 @@ export default function Navbar() {
           ))}
         </ul> */}
 
-        <Button variant="outline-navy" className=" lg:inline-flex">
+        {/* <Button
+          variant="outline-navy"
+          className="text-xs px-3 py-2 lg:text-[0.9375rem] lg:px-6 lg:py-2.5 lg:inline-flex"
+        >
+          <Link href="#servicios">
+          
+          
           Comenza ahora
-        </Button>
+          </Link>
+        </Button> */}
 
         {/* <button
           type="button"
