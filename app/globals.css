@@ -1,26 +1,239 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@font-face {
+  font-family: 'Blinker';
+  src: url('/fonts/Blinker-ExtraLight.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Blinker';
+  src: url('/fonts/Blinker-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Blinker';
+  src: url('/fonts/Blinker-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Blinker';
+  src: url('/fonts/Blinker-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Blinker';
+  src: url('/fonts/Blinker-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+
+@font-face {
+  font-family: 'Goldplay';
+  src: url('/fonts/Goldplay Black.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Goldplay';
+  src: url('/fonts/Goldplay Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Goldplay';
+  src: url('/fonts/Goldplay SemiBold.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Goldplay';
+  src: url('/fonts/Goldplay Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Goldplay';
+  src: url('/fonts/Goldplay Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Goldplay';
+  src: url('/fonts/Goldplay Alt SemiBold It.otf') format('opentype');
+  font-weight: 600;
+  font-style: italic;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@theme {
+  /* ── Rojos ── */
+  --color-redd:        #ed1b24;
+  --color-red-dark:   #c51f2b;
+
+  /* ── Azules ── */
+  --color-blue-light:  #6fa7da;
+  --color-blue-mid:    #6594ca;
+  --color-blue-navy:   #1f3a81;
+  --color-blue-dark:   #0d103b;
+
+  /* ── Grises ── */
+  --color-gray-light:  #bcbdc1;
+  --color-gray-mid:    #949599;
+  --color-gray-dark:   #59595b;
+  --color-foot: #303032;
+  --color-text: #1B1C1D;
+  --color-textp: #4A4A4A;
+
+  /* ── Fondos ── */
+  --color-white:       #ffffff;
+  --color-bg-light:    #f0f7ff;
+  --color-bg-gray:     #f8f9fa;
+
+  /* ── Tipografías ── */
+  --font-heading: 'Goldplay', sans-serif;
+  --font-body:    'Blinker', sans-serif;
+}
+
+/* ─── Base ────────────────────────────────────────────────── */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-white font-body antialiased;
+    color: var(--color-gray-dark);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    color: var(--color-blue-dark);
+  }
+
+  h1 {
+    @apply font-heading font-black leading-tight text-[2.5rem] md:text-[3.5rem] text-justify lg:text-left 
+  }
+ 
+
+  h2 {
+    @apply font-heading font-bold leading-snug text-[1.8rem] md:text-[2.8rem];
+  }
+
+
+  h3 {
+    @apply font-heading font-semibold tracking-wide text-[1.8rem] md:text-[2rem];
+  }
+ 
+
+  h4 {
+    @apply font-heading font-semibold tracking-wide leading-snug text-[1.5rem];
+  }
+  
+
+  h5 {
+    @apply font-heading font-semibold text-[1.2rem];
+  }
+
+
+
+  p {
+    @apply leading-relaxed font-body text-textp text-[1.2rem] text-justify;
+  }
+ 
+  a {
+    @apply transition-colors duration-200 font-heading text-text hover:text-red-dark;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer components {
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.875rem 2rem;
+    border-radius: 0.75rem;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1rem;
+    background-color: var(--color-red-dark);
+    color: var(--color-white);
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+    border: 2px solid transparent;
+
+    &:hover {
+      opacity: 0.88;
+    }
+  }
+
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.875rem 2rem;
+    border-radius: 0.75rem;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1rem;
+    background-color: var(--color-blue-navy);
+    color: var(--color-white);
+    cursor: pointer;
+    transition: opacity 0.2s, transform 0.1s;
+    border: 2px solid transparent;
+
+    &:hover {
+      opacity: 0.88;
+    }
+  }
+
+  .btn-outline-white {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.875rem 2rem;
+    border-radius: 0.75rem;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1rem;
+    background-color: transparent;
+    color: var(--color-white);
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s, transform 0.1s;
+    border: 2px solid var(--color-white);
+
+    &:hover {
+      background-color: var(--color-white);
+      color: var(--color-blue-navy);
+    }
+  }
+
+  .btn-outline-navy {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.625rem 1.5rem;
+    border-radius: 0.5rem;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 0.9375rem;
+    background-color: transparent;
+    color: var(--color-blue-navy);
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s, transform 0.1s;
+    border: 2px solid var(--color-blue-navy);
+
+    &:hover {
+      background-color: var(--color-blue-navy);
+      color: var(--color-white);
+    }
+  }
 }
