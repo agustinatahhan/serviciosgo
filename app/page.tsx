@@ -4,6 +4,7 @@ import QueEs from "@/components/sections/QueEs";
 import ComoFunciona from "@/components/sections/ComoFunciona";
 import CTADoble from "@/components/sections/CTADoble";
 import Footer from "@/components/sections/Footer";
+import Categorias from "@/components/sections/Categorias";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <main>
         <Hero />
         <QueEs />
+        <Categorias />
         <ComoFunciona />
         <CTADoble />
       </main>
