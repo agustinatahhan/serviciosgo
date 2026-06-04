@@ -27,31 +27,30 @@ export default function Footer() {
         >
           {/* Columna 1 */}
           <div className="flex flex-col gap-5">
-            <div className="flex items-center gap-4">
+            <div className="flex flex-wrap items-center gap-3 sm:gap-4">
               <Image
                 src="/images/logos/serviciosgo.png"
                 alt="Logo ServicioSGO"
                 width={160}
                 height={44}
-                className="object-contain h-10 w-auto"
+                className="object-contain h-8 sm:h-10 w-auto"
               />
-              <div className="w-px h-8 bg-white/20" />
+              <div className="w-px h-7 sm:h-8 bg-white/20" />
               <Image
                 src="/images/logos/logoblanco.png"
                 alt="Logo Santiago del Estero"
                 width={80}
                 height={44}
-                className="object-contain h-10 w-auto"
+                className="object-contain h-8 sm:h-10 w-auto"
               />
-              <div className="w-px h-8 bg-white/20" />
+              <div className="w-px h-7 sm:h-8 bg-white/20" />
               <Image
                 src="/images/logos/ciid.png"
-                alt="Logo Santiago del Estero"
+                alt="Logo CIIDse"
                 width={80}
                 height={44}
-                className="object-contain h-10 w-auto"
+                className="object-contain h-8 sm:h-10 w-auto"
               />
-              <div className="h-10 w-20" aria-hidden="true" />
             </div>
 
             <div className="flex flex-col gap-3 max-w-sm">
