@@ -1,14 +1,20 @@
 "use client";
 
-import { ButtonHTMLAttributes } from "react";
+import { ButtonHTMLAttributes, AnchorHTMLAttributes } from "react";
 import { motion } from "framer-motion";
 
-interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+type BaseProps = {
   variant?: "primary" | "secondary" | "outline-white" | "outline-navy";
   fullWidth?: boolean;
-}
+};
 
-const variantMap: Record<NonNullable<ButtonProps["variant"]>, string> = {
+type ButtonProps = BaseProps &
+  (
+    | ({ href?: undefined } & ButtonHTMLAttributes<HTMLButtonElement>)
+    | ({ href: string } & AnchorHTMLAttributes<HTMLAnchorElement>)
+  );
+
+const variantMap: Record<NonNullable<BaseProps["variant"]>, string> = {
   primary: "btn-primary",
   secondary: "btn-secondary",
   "outline-white": "btn-outline-white",
@@ -20,14 +26,31 @@ export default function Button({
   fullWidth = false,
   className = "",
   children,
+  href,
   ...props
 }: ButtonProps) {
+  const classes = `${variantMap[variant]}${fullWidth ? " w-full" : ""}${className ? ` ${className}` : ""}`;
+
+  if (href) {
+    return (
+      <motion.a
+        href={href}
+        whileHover={{ scale: 1.02 }}
+        whileTap={{ scale: 0.97 }}
+        className={classes}
+        {...(props as AnchorHTMLAttributes<HTMLAnchorElement>)}
+      >
+        {children}
+      </motion.a>
+    );
+  }
+
   return (
     <motion.button
       whileHover={{ scale: 1.02 }}
       whileTap={{ scale: 0.97 }}
-      className={`${variantMap[variant]}${fullWidth ? " w-full" : ""}${className ? ` ${className}` : ""}`}
-      {...(props as object)}
+      className={classes}
+      {...(props as ButtonHTMLAttributes<HTMLButtonElement>)}
     >
       {children}
     </motion.button>

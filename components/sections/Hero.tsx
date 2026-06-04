@@ -22,7 +22,7 @@ export default function Hero() {
         priority
       />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 w-full py-16">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 w-full pt-12 pb-12 lg:py-16">
         <div className="flex flex-col justify-center gap-4 max-w-2xl mx-auto items-center text-center lg:mx-0 lg:items-start lg:text-left">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -75,8 +75,18 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
             className="w-full sm:w-auto flex flex-col sm:flex-row gap-4 "
           >
-            <Button variant="primary">Necesito un servicio</Button>
-            <Button variant="secondary">Ofrezco mis servicios</Button>
+            <Button
+              variant="primary"
+              href="https://serviciosgo.qxm.com.ar/pedido/nuevo"
+            >
+              Necesito un servicio
+            </Button>
+            <Button
+              variant="secondary"
+              href="https://serviciosgo.qxm.com.ar/registro/trabajadores"
+            >
+              Ofrezco mis servicios
+            </Button>
           </motion.div>
         </div>
       </div>

@@ -46,8 +46,18 @@ export default function CTADoble() {
           transition={{ duration: 0.55, delay: 0.2, ease: "easeOut" }}
           className="w-full flex flex-col md:w-auto md:items-center md:justify-center sm:flex-row gap-4"
         >
-          <Button variant="primary">Necesito un servicio</Button>
-          <Button variant="secondary">Ofrezco mis servicios</Button>
+          <Button
+            variant="primary"
+            href="https://serviciosgo.qxm.com.ar/pedido/nuevo"
+          >
+            Necesito un servicio
+          </Button>
+          <Button
+            variant="secondary"
+            href="https://serviciosgo.qxm.com.ar/registro/trabajadores"
+          >
+            Ofrezco mis servicios
+          </Button>
         </motion.div>
       </div>
     </section>

@@ -18,9 +18,9 @@ const features = [
   },
   {
     icon: Building2,
-    title: "Plataforma pública",
+    title: "Más oportunidades",
     description:
-      "Transparente, inclusiva y sin costos de inscripción para los ciudadanos ni trabajadores.",
+      "Una herramienta transparente, inclusiva y sin costos de inscripción para ciudadanos y trabajadores",
   },
 ];
 

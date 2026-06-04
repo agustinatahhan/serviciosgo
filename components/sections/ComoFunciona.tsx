@@ -114,7 +114,12 @@ export default function ComoFunciona() {
                 />
               ))}
             </div>
-            <Button variant="primary" fullWidth className="mt-auto">
+            <Button
+              variant="primary"
+              fullWidth
+              className="mt-auto"
+              href="https://serviciosgo.qxm.com.ar/pedido/nuevo"
+            >
               Necesito un servicio
             </Button>
           </motion.div>
@@ -144,7 +149,12 @@ export default function ComoFunciona() {
                 />
               ))}
             </div>
-            <Button variant="secondary" fullWidth className="mt-auto">
+            <Button
+              variant="secondary"
+              fullWidth
+              className="mt-auto"
+              href="https://serviciosgo.qxm.com.ar/registro/trabajadores"
+            >
               Ofrezco mis servicios
             </Button>
           </motion.div>
