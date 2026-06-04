@@ -1,7 +1,6 @@
 "use client";
 
-import { ButtonHTMLAttributes, AnchorHTMLAttributes } from "react";
-import { motion } from "framer-motion";
+import { motion, HTMLMotionProps } from "framer-motion";
 
 type BaseProps = {
   variant?: "primary" | "secondary" | "outline-white" | "outline-navy";
@@ -10,8 +9,8 @@ type BaseProps = {
 
 type ButtonProps = BaseProps &
   (
-    | ({ href?: undefined } & ButtonHTMLAttributes<HTMLButtonElement>)
-    | ({ href: string } & AnchorHTMLAttributes<HTMLAnchorElement>)
+    | ({ href?: undefined } & HTMLMotionProps<"button">)
+    | ({ href: string } & HTMLMotionProps<"a">)
   );
 
 const variantMap: Record<NonNullable<BaseProps["variant"]>, string> = {
@@ -38,7 +37,7 @@ export default function Button({
         whileHover={{ scale: 1.02 }}
         whileTap={{ scale: 0.97 }}
         className={classes}
-        {...(props as AnchorHTMLAttributes<HTMLAnchorElement>)}
+        {...(props as HTMLMotionProps<"a">)}
       >
         {children}
       </motion.a>
@@ -50,7 +49,7 @@ export default function Button({
       whileHover={{ scale: 1.02 }}
       whileTap={{ scale: 0.97 }}
       className={classes}
-      {...(props as ButtonHTMLAttributes<HTMLButtonElement>)}
+      {...(props as HTMLMotionProps<"button">)}
     >
       {children}
     </motion.button>
