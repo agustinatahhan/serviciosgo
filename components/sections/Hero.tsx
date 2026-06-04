@@ -22,7 +22,7 @@ export default function Hero() {
         priority
       />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 w-full pt-40 pb-40 lg:py-16">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 w-full pt-30 pb-30 lg:py-16">
         <div className="flex flex-col justify-center gap-4 max-w-2xl mx-auto items-center text-center lg:mx-0 lg:items-start lg:text-left">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
