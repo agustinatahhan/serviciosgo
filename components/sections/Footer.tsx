@@ -86,8 +86,7 @@ export default function Footer() {
 
         <div className="mt-12 pt-6 border-t border-white/10 text-center">
           <p className="font-body text-white/50 text-xs">
-            © 2026 Gobierno de Santiago del Estero. CIIDse – Secretaría de
-            Ciencia y Tecnología.
+            © 2026 Gobierno de Santiago del Estero. CIIDse
           </p>
         </div>
       </div>
