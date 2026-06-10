@@ -52,6 +52,14 @@ export default function Navbar() {
           /> */}
         </div>
 
+        <Button
+          variant="gray"
+          href="https://serviciosgo.qxm.com.ar/login"
+          className="text-xs px-3 py-2 lg:text-[0.9375rem] lg:px-6 lg:py-2.5"
+        >
+          Iniciar Sesión
+        </Button>
+
         {/* <ul className="hidden lg:flex items-center gap-8">
           {navLinks.map((link) => (
             <li key={link.href}>

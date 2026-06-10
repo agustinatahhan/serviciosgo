@@ -73,19 +73,28 @@ export default function Hero() {
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
-            className="w-full sm:w-auto flex flex-col sm:flex-row gap-4 "
+            className="w-full sm:w-auto flex flex-col gap-4"
           >
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Button
+                variant="primary"
+                href="https://serviciosgo.qxm.com.ar/pedido/nuevo"
+              >
+                Necesito un servicio
+              </Button>
+              <Button
+                variant="secondary"
+                href="https://serviciosgo.qxm.com.ar/registro/trabajadores"
+              >
+                Ofrezco mis servicios
+              </Button>
+            </div>
             <Button
-              variant="primary"
-              href="https://serviciosgo.qxm.com.ar/pedido/nuevo"
+              variant="gray"
+              href="https://serviciosgo.qxm.com.ar/login"
+              className="w-full sm:w-auto sm:self-center"
             >
-              Necesito un servicio
-            </Button>
-            <Button
-              variant="secondary"
-              href="https://serviciosgo.qxm.com.ar/registro/trabajadores"
-            >
-              Ofrezco mis servicios
+              Ya tengo cuenta
             </Button>
           </motion.div>
         </div>

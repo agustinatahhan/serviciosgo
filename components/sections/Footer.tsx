@@ -12,6 +12,10 @@ const quickLinks = [
     label: "Ofrecer mis servicios",
     href: "https://serviciosgo.qxm.com.ar/registro/trabajadores",
   },
+   {
+    label: "Ya tengo cuenta",
+    href: "https://serviciosgo.qxm.com.ar/login",
+  },
 ];
 
 export default function Footer() {

@@ -2,15 +2,27 @@
 
 import { Fragment } from "react";
 import { motion } from "framer-motion";
-import { HardHat, Wrench, Zap, Flame, Sprout } from "lucide-react";
+import {
+  HardHat,
+  Wrench,
+  Zap,
+  Flame,
+  Sprout,
+  PaintRoller,
+  Hammer,
+  Settings,
+} from "lucide-react";
 
 export function CategoriasCarrousel() {
   const categorias = [
     { name: "Construcción", icon: HardHat },
     { name: "Plomería", icon: Wrench },
-    { name: "Electricidad", icon: Zap },
+    { name: "Electricista", icon: Zap },
     { name: "Gas", icon: Flame },
     { name: "Jardinería", icon: Sprout },
+    { name: "Pintura", icon: PaintRoller },
+    { name: "Herrería", icon: Hammer },
+    { name: "Mantenimientos", icon: Settings },
   ];
 
   return (

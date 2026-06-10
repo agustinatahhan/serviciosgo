@@ -3,7 +3,7 @@
 import { motion, HTMLMotionProps } from "framer-motion";
 
 type BaseProps = {
-  variant?: "primary" | "secondary" | "outline-white" | "outline-navy";
+  variant?: "primary" | "secondary" | "outline-white" | "outline-navy" | "gray";
   fullWidth?: boolean;
 };
 
@@ -18,6 +18,7 @@ const variantMap: Record<NonNullable<BaseProps["variant"]>, string> = {
   secondary: "btn-secondary",
   "outline-white": "btn-outline-white",
   "outline-navy": "btn-outline-navy",
+  gray: "btn-gray",
 };
 
 export default function Button({

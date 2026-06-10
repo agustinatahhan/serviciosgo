@@ -7,13 +7,20 @@ import Button from "@/components/ui/Button";
 export default function CTADoble() {
   return (
     <section className="relative overflow-hidden py-28 lg:py-36">
-      <Image
-        src="/images/sections/cta.png"
-        alt=""
-        fill
-        className="object-cover object-center"
-        aria-hidden="true"
-      />
+        <Image
+             src="/images/sections/cta-mobile.png"
+             alt="Profesionales y trabajadores de Santiago del Estero"
+             fill
+             className="object-cover object-center opacity-25 z-0 lg:hidden"
+             priority
+           />
+           <Image
+             src="/images/sections/cta.png"
+             alt="Profesionales y trabajadores de Santiago del Estero"
+             fill
+             className="object-cover object-center opacity-25 z-0 hidden lg:block"
+             priority
+           />
       <div className="absolute inset-0 bg-blue-navy/80" aria-hidden="true" />
 
       <div className="relative z-10 max-w-4xl mx-auto px-6 lg:px-12 text-center flex flex-col items-center gap-6">
