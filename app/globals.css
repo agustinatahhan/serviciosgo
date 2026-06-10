@@ -247,7 +247,7 @@
     font-weight: 700;
     font-size: 1rem;
     /* background-color: #9f9fa4; */
-    background-color: #616164  ;
+    background-color: #616164B2   ;
     color: var(--color-white);
     cursor: pointer;
     transition: opacity 0.2s, transform 0.1s;
